@@ -1,0 +1,15 @@
+{
+  "name": "themproject",
+    "description": "Provides integration of ",
+    "version": "0.1",
+    "author": "M-WAY GmbH",
+    "commands": {
+      "espresso": {
+        "hint": "Usage: espresso command [options]",
+          "commands": {
+            "init": { "hint": "name of the new project", "commands": { "-p": { "hint": "--project" } } },
+            "deploy": { "hint": "create HelloWorld application" }
+          }
+       }
+    }
+}
