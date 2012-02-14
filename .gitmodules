@@ -37,3 +37,6 @@
 [submodule "server/cloud9/ext/themproject/espresso"]
 	path = server/cloud9/ext/themproject/espresso
 	url = git@github.com:hano/Espresso.git
+[submodule "client/ext/themproject"]
+	path = client/ext/themproject
+	url = git@github.com:mwaylabs/C9-Extensions.git
