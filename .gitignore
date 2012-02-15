@@ -16,3 +16,5 @@ aut.js
 helloworld.js
 build/
 .*.gz
+client/ext/tmpbuilder
+client/ext/tmpman

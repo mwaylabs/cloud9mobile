@@ -141,8 +141,13 @@ Ide.DEFAULT_PLUGINS = [
     "ext/quickstart/quickstart",
     "ext/jslanguage/jslanguage",
     "ext/autotest/autotest",
-    "ext/tabsessions/tabsessions"
+    "ext/tabsessions/tabsessions",
+
+
+		"ext/tmpman/tmpman",
+		"ext/tmpbuilder/tmpbuilder"
     //"ext/acebugs/acebugs"
+
 ];
 
 exports.DEFAULT_DAVPLUGINS = ["auth", "codesearch", "filelist", "filesearch"];

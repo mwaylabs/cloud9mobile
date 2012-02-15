@@ -37,3 +37,9 @@
 [submodule "server/cloud9/ext/themproject/espresso"]
 	path = server/cloud9/ext/themproject/espresso
 	url = git@github.com:hano/Espresso.git
+[submodule "client/ext/tmpbuilder"]
+	path = client/ext/tmpbuilder
+	url = /Users/vhahn/Projects/js/c9extensions/client/tmpbuilder/
+[submodule "client/ext/tmpman"]
+	path = client/ext/tmpman
+	url = /Users/vhahn/Projects/js/c9extensions/client/tmpman/
