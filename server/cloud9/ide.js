@@ -141,6 +141,8 @@ Ide.DEFAULT_PLUGINS = [
     "ext/quickstart/quickstart",
     "ext/jslanguage/jslanguage",
     "ext/autotest/autotest",
+	"ext/themproject/tmpbuilder/tmpbuilder",
+	"ext/themproject/tmpman/tmpman",
     "ext/tabsessions/tabsessions"
     //"ext/acebugs/acebugs"
 ];
