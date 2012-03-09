@@ -16,3 +16,4 @@ aut.js
 helloworld.js
 build/
 .*.gz
+.idea
