@@ -16,6 +16,7 @@ var TheMProject = module.exports = function (ide) {
     this.name = "themproject";
     this.server = '';
     this.client = '';
+    this.espressoNodeProcesses = [];
 };
 
 Sys.inherits(TheMProject, Plugin);
@@ -75,6 +76,14 @@ Sys.inherits(TheMProject, Plugin);
      };
      */
 
+    this.killAllEspressoProcesses = function(){
+        var that = this;
+        Object.keys(this.espressoNodeProcesses).forEach(function(ind){
+            if(that.espressoNodeProcesses[ind].kill)
+                that.espressoNodeProcesses[ind].kill("SIGKILL");
+        });
+    };
+
     this.espresso = function (message) {
         console.log('message:', message);
         var self = this;
@@ -82,7 +91,12 @@ Sys.inherits(TheMProject, Plugin);
 
             var params = this._getParameters(message);
 
-            this.spawnCommand('node', params, message.cwd, null, null, function (code, err, out) {
+            if (message.argv[1] === 'stop' && this.espressoNodeProcesses.length > 0){
+                this.killAllEspressoProcesses();
+                return;
+            }
+
+            var espressoNodeProcess = this.spawnCommand('node', params, message.cwd, null, null, function (code, err, out) {
 
                 self.sendResult(0, message.command, {
                     code: code,
@@ -91,6 +105,7 @@ Sys.inherits(TheMProject, Plugin);
                     out: out
                 });
             });
+            this.espressoNodeProcesses.push(espressoNodeProcess);
         } else {
             console.log('received this message', message);
         }
